@@ -6,9 +6,6 @@ from process_data_after_predictions import process_data
 from plot_data import plot_results
 import sys
 from os import getcwd
-from os import environ
-
-# environ['CUDA_VISIBLE_DEVICES'] = '-1'
 
 def main():
     companys = ['NFLX'] # choose FB or AMZN
@@ -42,8 +39,10 @@ def main():
 
             plottable_data_title = process_data(company_title, historical_data)
             plottable_data_text = process_data(company_text, historical_data)
-            plot_results(plottable_data_title, company)
-            plot_results(plottable_data_text, company)
+            text_company = company + '_TEXT'
+            title_company = company + '_TITLE'
+            plot_results(plottable_data_title, title_company)
+            plot_results(plottable_data_text, text_company)
             
 
 if __name__ == '__main__':
