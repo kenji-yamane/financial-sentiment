@@ -10,7 +10,7 @@ This repository consists in a sentiment analysis of financial market using pre-t
   ```
   python main.py True
   ```
-### To proccess and plot data already obtained
+### To process and plot data already obtained
   ```
   python main.py False
   ```
